@@ -14,11 +14,15 @@ provider "aws" {
   region = "us-west-2"
 }
 
+// to create a default vpc
+
 # resource "aws_default_vpc" "default" {
 #   tags = {
 #     Name = "Default VPC"
 #   }
 # }
+
+// create ec2 t2.micro instance
 
 resource "aws_instance" "app_server" {
   ami = "ami-830c94e3"
